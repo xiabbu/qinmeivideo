@@ -103,8 +103,16 @@ wp_reset_query();?>
                     <div class="col-md-12 margin-top index-play-page index-play visible-xs-*">
                           <div class="row">
     
-		<?php 
-        $the_query = new WP_Query( array( 'post_type' => 'page','orderby' => 'modified','showposts' => 8,'tag'=> 'hot1,hot2,hot3,hot4'));?>
+<?php 
+     $general_options = get_option('ashuwp_general');
+foreach($general_options['index_hot_modules'] as $hot2) { ?>
+                            
+<?php     $the_query = new WP_Query( array( 
+          'post_type' => 'page',
+          'orderby' => 'modified',
+          'showposts' => $hot2['index_hot_list_num'],
+          'tag_id'=>$hot2['index_hot_tag']
+        ));?>
                   <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 										<a href="<?php the_permalink() ?>"><div class="index-table-list"><img src="<?php the_post_thumbnail_url(thumbnail); ?>" alt=""><p class="index-left-top"><?php echo get_post_meta($post->ID,"new",true);?></p></div></a>
@@ -113,6 +121,7 @@ wp_reset_query();?>
                   <?php endwhile; ?>
 					
              <?php wp_reset_postdata();; ?> 
+                            <?php }; ?> 
                           </div>
                           </div>
  <?php 
