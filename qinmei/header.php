@@ -34,7 +34,6 @@
 <script  src="<?php bloginfo('template_url'); ?>/js/app/qinmei.js"></script>
 </head>
 <body>
-<?php $general_options = get_option('ashuwp_general');var_dump($general_options);?>
   <div class="phone-pic">
 		<div class="phone-logo"></div>  
   </div>
