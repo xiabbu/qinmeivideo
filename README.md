@@ -2,8 +2,10 @@
 此主题主要是本站所用，很多功能都是根据自己的需求开发的，若有不一样的使用需求，可自己修改。
 
 ### 更新说明
-2018.3.20，更新播放器控制栏样式，模仿YouTube，添加剧场模式，下一集，设置功能暂时没想到用途，暂时空着
+2018.3.20，更新播放器控制栏样式，模仿YouTube，添加剧场模式，下一集，设置功能暂时没想到用途，暂时空着,如使用请切换到
 ![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/1.0/images/04.JPG)
+
+以上更新皆在master分支下，1.0版本将不再改动，具体效果如下面的教程展示那样
 
 预览图
 ![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/1.0/images/01.JPG)
