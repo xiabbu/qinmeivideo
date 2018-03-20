@@ -1,18 +1,22 @@
 # qinmeivideo
 此主题主要是本站所用，很多功能都是根据自己的需求开发的，若有不一样的使用需求，可自己修改。
 
+###更新说明
+2018.3.20，更新播放器控制栏样式，模仿YouTube，添加剧场模式，下一集，设置功能暂时没想到用途，暂时空着
+![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/1.0/images/04.JPG)
+
 预览图
-![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/master/images/01.JPG)
+![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/1.0/images/01.JPG)
 
 ### 使用教程
 将qinmei文件夹上传至wordpress的主题文件夹，然后后台启用就行
 
 ### 使用前提
 1.posts文章页用来播放视频，内容只需要放置播放直链即可，而且由于html5的播放限制，目前支持MP4格式，flash模式暂时还未加上，需要使用请自行研究videojs。
-![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/master/images/02.JPG)
+![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/1.0/images/02.JPG)
 
 2.page页面则是主要使用的类型，番剧详情页以及各大分类目录皆是由page来构建，后台已经内置了几个模板，在创建时勾选即可。
-![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/master/images/03.JPG)
+![Alt](https://raw.githubusercontent.com/qinvz/qinmeivideo/1.0/images/03.JPG)
 
 3.此主题所有的目录都是按照二级目录来使用的，文章页顶栏以及详情页面的底部目录匹配都是这个逻辑，因此建议按照：
 >一级目录
