@@ -34,35 +34,111 @@ html {
 .ashuwp_field {
   width:100%;
   position:relative;
-  margin-top:40px;
+  margin-top:20px;
   min-height:20px;
   float:left;
 }
-.multiple_item .ashuwp_field{
-width:auto;
-  display:inline-block;
+
+#qinmei_base .ashuwp_field {
+  width:50%;
+  min-width: 350px;
 }
-.ashuwp_field .ashuwp_select_field{
-  width:150px;
+#baseinfo_play_info .ashuwp_field {
+  width:50%;
+  min-width: 350px;
 }
-.ashuwp_field .ashuwp_text_field{
-  width:200px;
+
+#baseinfo_relative .ashuwp_text_field {
+  width:50%;
+  min-width: 350px;
 }
+
+#baseinfo_relative .ashuwp_field:nth-last-child(1) .ashuwp_field_label{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .ashuwp_field .ashuwp_field_label {
   display:block;
   font-size:14px;
   font-weight:700;
-  width:200px;
   float:left;
 }
+#qinmei_base  .ashuwp_field .ashuwp_field_area{
+  width: 90%;
+}
+
+#baseinfo_play_info  .ashuwp_field .ashuwp_field_area{
+  width: 90%;
+}
+
+#baseinfo_relative  .ashuwp_field .ashuwp_field_area{
+  width: 90%;
+}
+
 
 .ashuwp_field .ashuwp_field_area {
-  padding-left:200px;
+  padding-left:100px;
 }
+.ashuwp_field.ashuwp_group_field .ashuwp_field.ashuwp_text_field{
+  width: auto;
+}
+
+.ashuwp_group_field .ashuwp_field_area{
+  padding-left: 0;
+}
+#tab_qinmei_base .ashuwp_group_field .ashuwp_field_area{
+  padding-left: 100px;
+}
+
+#tab_qinmei_play .ashuwp_group_field .ashuwp_field_area{
+  padding-left: 100px;
+}
+#tab_qinmei_base .field_group .ashuwp_field_area{
+  padding-left: 0;
+}
+#baseinfo_episode .ashuwp_field .ashuwp_field_area .field_group{
+  background-color: white;
+}
+.ashuwp_field .ashuwp_field_area .field_group{
+  padding: 0;
+}
+.ashuwp_field.ashuwp_group_field .field_group .ashuwp_field .ashuwp_field_label{
+  display: none;
+}
+.multiple_item.multiple_group_item:nth-child(1) .ashuwp_field_label{
+  display: block !important;
+}
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(1){
+  width: 10%;
+}
+
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(2){
+  width: 20%;
+}
+
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(3){
+  width: 20%;
+}
+
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(4){
+  width: 50%;
+}
+
+.multiple_item a.delete_item{
+  bottom: 0;
+}
+
+#baseinfo_douban_link,#baseinfo_play_dilidili,#baseinfo_play_qq,#baseinfo_play_iqiyi,#baseinfo_play_pptv,#baseinfo_play_letv,#baseinfo_play_bilibili{
+      width: calc(100% - 122px);
+}
+
+#baseinfo-daouban-get-btn,#baseinfo-play-dilidili-btn{
+  height: 26px;
+}
+
 .ashuwp_field .ashuwp_field_area .field_group {
-  background:#ededed;
-  padding:10px;
-  border-radius:5px;
 }
 .ashuwp_field .ashuwp_field_area .multiple_item {
   margin:0 0 10px 0;
@@ -113,11 +189,11 @@ width:auto;
 .ashuwp_field input.ashuwp_field_input,
 .ashuwp_field textarea.ashuwp_field_textarea {
   width:100%;
-  max-width:500px;
+  max-width:600px;
 }
 .multiple_wrap {
   width:100%;
-  
+
 }
 .multiple_item {
   width:100%;
@@ -133,7 +209,7 @@ width:auto;
 .multiple_item a.delete_item {
   position:absolute;
   right:0;
-  bottom:20px;
+  bottom:0px;
   display:block;
   width:60px;
   text-align:center;
@@ -327,4 +403,41 @@ ul.nav-tabs li.ui-tabs-active a:hover {
 .inline-edit-row .ashuwp_field .ashuwp_field_area {
   padding-left:6em;
   font-size:12px;
+}
+.ashuwp_field_area p{
+  display: inline-block;
+  margin-left: 20px !important;
+}
+
+#tab_qinmei_play .ashuwp_field_area .multiple_item .field_group .ashuwp_field{
+  width: 50%;
+}
+
+#tab_qinmei_play .ashuwp_field_area .multiple_item .field_group .ashuwp_field .ashuwp_field_area{
+  padding-left: 0;
+}
+
+@media (max-width: 756px) {
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(1){
+  width: 30%;
+}
+
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(2){
+  width: 70%;
+}
+
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(3){
+  width: 30%;
+}
+
+.field_group .ashuwp_field.ashuwp_text_field:nth-child(4){
+  width: 70%;
+}
+.multiple_item.multiple_group_item{
+  padding-right: 50px;
+}
+}
+
+#qinmei_animate_add_start{
+  display: none;
 }

@@ -3,7 +3,7 @@
 * Ashuwp_framework
 * Author: Ashuwp
 * Author url: http://www.ashuwp.com
-* Version: 6.1
+* Version: 6.4
 **/
 
 class ashuwp_framework_core {
@@ -95,7 +95,7 @@ class ashuwp_framework_core {
     $terms = array();
     $top_terms = get_terms($args);
     
-    if(!empty($top_terms)){
+    if ( $top_terms && ! is_wp_error( $top_terms ) ){
       foreach($top_terms as $term){
         
         $terms[$term->term_id] = $term->name;
@@ -138,13 +138,15 @@ class ashuwp_framework_core {
       global $wp_registered_sidebars;
       $sidebars = $wp_registered_sidebars;
       foreach( $sidebars as $sidebar ){
-        $entries[$sidebar['id']] = $sidebar['name'];
+        $entries[$sidebar['id']] = $sidebar['id'];
       }
     }elseif( in_array($values['subtype'],$taxonomies_names) ){
       $t_args = array(
         'taxonomy' => $values['subtype'],
         'hide_empty' => false,
-        'parent' => 0
+        'parent' => 0,
+        'orderby' => 'id',
+        'order' => 'DESC'
       );
       if($values['type']=='select'){
         $space = '&nbsp;&nbsp;&nbsp;';
@@ -1015,7 +1017,7 @@ class ashuwp_framework_core {
       }
       $html_format .= '</div>';
       
-      $html_format .= $values['desc'].'<a href="#" class="delete_item">Delete</a></div>';
+      $html_format .= $values['desc'].'<a href="#" class="delete_item button-secondary">删除</a></div>';
       
       $this->enqueue_html['ashuwp_framework_html_'.$values['id']] = $html_format;
     }
@@ -1080,10 +1082,10 @@ class ashuwp_framework_core {
         }
         echo '</div>';
         
-        echo '<a href="#" class="delete_item">Delete</a></div>';
+        echo '<a href="#" class="delete_item button-secondary">删除</a></div>';
       }
       
-      echo '<a href="#" class="add_item button-secondary" data_name="ashuwp_framework_html_'.$values['id'].'">Add</a></div>';
+      echo '<a href="#" class="add_item button-secondary" data_name="ashuwp_framework_html_'.$values['id'].'">添加</a></div>';
       
     }else{
       if(is_array($values['subtype'])){
